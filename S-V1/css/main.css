@@ -1,0 +1,22 @@
+:root {
+    --main-dark: #1e1e1e;
+    --main-light: #e1e1e1;
+    --color-black: 	#0e1111;
+    --color-white: #fafcf8;
+}
+
+* {
+    transition-duration: 0.1s;
+}
+
+body {
+    background-color: var(--main-light);
+}
+
+button, select, option {
+    border: none;
+    outline:none;
+    text-decoration: none;
+
+    cursor: pointer;
+}
