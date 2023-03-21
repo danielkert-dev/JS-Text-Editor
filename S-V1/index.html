@@ -9,38 +9,47 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/editor.css">
 
-    <script src="js/main.js"></script>
+    
 
 </head>
-<body onclick="document.querySelector('.editor').focus()">
+<body>
+    
+    <script src="js/main.js"></script>
 
     <main>
         <div class="editor-head">
-            <select>
+            <select id="font" onchange="setEditorFocus()">
                 <option>Arial</option>
                 <option></option>
             </select>
-            <button class="strikethrough" onclick="document.execCommand( 'strikethrough',false,null);"><img src="img/editor-strikethrough-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            <button class="strikethrough" onclick="document.execCommand( 'strikethrough',false,null);setEditorFocus()"><img src="img/editor-strikethrough-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            <button class="redo-apply" onclick="document.execCommand( 'bold',false,null); setEditorFocus()"><img src="img/bold-10-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            <button class="redo-apply" onclick="document.execCommand( 'italic',false,null); setEditorFocus()"><img src="img/italic-44-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
 
-            <button class="align-left" onclick="document.execCommand( 'justifyLeft',false,null);"><img src="img/align-left-8-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
-            <button class="align-center" onclick="document.execCommand( 'justifyCenter',false,null);"><img src="img/align-center-4-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
-            <button class="align-right" onclick="document.execCommand( 'justifyRight',false,null);"><img src="img/align-right-9-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
-            
-            <button class="redo-apply" onclick="document.execCommand( 'redo',false,null);"></button>
-            <button class="undo-apply" onclick="document.execCommand( 'undo',false,null);"></button>
-            <button class="orderedlist" onclick="document.execCommand('insertOrderedList', false, null);"></button>
-            <button class="unorderedlist" onclick="document.execCommand('insertUnorderedList',false, null)"></button>    
+
+            <button class="redo-apply" onclick="document.execCommand( 'redo',false,null); setEditorFocus()"></button>
+            <button class="undo-apply" onclick="document.execCommand( 'undo',false,null); setEditorFocus()"></button>
+            <button class="orderedlist" onclick="document.execCommand('insertOrderedList', false, null); setEditorFocus()"></button>
+            <button class="unorderedlist" onclick="document.execCommand('insertUnorderedList',false, null); setEditorFocus()"></button>    
             <input class="color-apply" type="color" onchange="chooseColor()" id="myColor"> 
-      
+            
+            <button class="align-left" onclick="document.execCommand( 'justifyLeft',false,null);setEditorFocus()"><img src="img/align-left-8-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            <button class="align-center" onclick="document.execCommand( 'justifyCenter',false,null);setEditorFocus()"><img src="img/align-center-4-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            <button class="align-right" onclick="document.execCommand( 'justifyRight',false,null);setEditorFocus()"><img src="img/align-right-9-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>
+            
             </div>
     <div class="editor-position">
-        <div class="editor" contenteditable="true" spellcheck="true" class="rq-form-element" autofocus></div>
+        <div class="editor" id="editor" contenteditable="true" spellcheck="true" class="rq-form-element" autofocus></div>
     </div>
     <div class="editor-footer">
         <div class="edit-editor">
         <button>SAVE</button>
         <button>IMPORT</button>
     </div>
+    </div>
+
+    <div style="height: 1000px;">
+
     </div>
     </main>
     
