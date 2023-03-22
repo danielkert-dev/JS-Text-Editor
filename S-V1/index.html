@@ -16,12 +16,25 @@
 <body>
     
     <main>
+    
         <div class="editor-head">
-            <select id="font" onclick="setEditorFocus()">
-                <option>Arial</option>
-                <option></option>
-            </select>
             
+            <select id="input-font" class="input"  onchange="changeFont (this);">
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Sans serif">Sans serif</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+              </select>
+
             <select id="fontSize" onclick="changeSize()">
                 <option value="1">1</option>      
                 <option value="2">2</option>

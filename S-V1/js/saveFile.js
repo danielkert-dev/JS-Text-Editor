@@ -1,4 +1,6 @@
 
+// Take input, Create a download link, put text data inside the download link
+
 function saveTextAsFile() {
     var textToWrite = document.getElementById('text').innerHTML;
     var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
