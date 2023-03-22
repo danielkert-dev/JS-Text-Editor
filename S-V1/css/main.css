@@ -8,13 +8,14 @@
 * {
     transition-duration: .1s;
     /*outline: auto;/**/
+    color: var(--color-black);
 }
 
 body {
     background-color: var(--main-light);
 }
 
-button, select, option {
+button, select, option, input {
     border: none;
     outline:none;
     text-decoration: none;
