@@ -14,5 +14,6 @@ function changeFont(){
 
   function chooseColor(){
     var myColor = document.getElementById("myColor").value;
+    console.log(myColor);
     document.execCommand('foreColor', false, myColor);
   }

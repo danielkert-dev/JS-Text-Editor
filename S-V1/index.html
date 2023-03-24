@@ -61,9 +61,7 @@
             <button onclick="document.execCommand('insertUnorderedList',false, null); setEditorFocus()"><img src="img/list-12-512.png" width="15px" height="15px" style="padding-top: 2px;"></button>    
             <hr>
             
-            <input type="color" onchange="chooseColor()" id="myColor"> 
-
-        
+            <input class="color-apply" type="color" onchange="chooseColor()" id="myColor">
             </div>
 
     <div class="editor-position">
@@ -81,11 +79,14 @@
         </select>
         <button value="save" id="save" onclick="saveTextAsFile()">SAVE</button>
         <button>IMPORT</button>
+        
     </div>
     </div>
     <div style="height: 1000px;">
     </div>
+    
     </main>
+
   
 </body>
 </html>
